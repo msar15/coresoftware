@@ -64,4 +64,77 @@ void PHG4OHCalDisplayAction::ApplyDisplayAction(G4VPhysicalVolume * /*physvol*/)
     m_ChimSteelVol->SetVisAttributes(m_VisAtt2);
     m_VisAttVec2.push_back(m_VisAtt2);
   }
+
+  //=====================================
+  G4VisAttributes *m_VisAtt3 = new G4VisAttributes();
+  m_VisAtt3->SetVisibility(true);
+  m_VisAtt3->SetForceSolid(true);
+  m_VisAtt3->SetColor(G4Colour::Red());
+  if (m_Ring1Vol)
+    {
+      if (m_Ring1Vol->GetVisAttributes())
+	{
+	  return;
+	}
+      m_Ring1Vol->SetVisAttributes(m_VisAtt3);
+      m_VisAttVec3.push_back(m_VisAtt3);
+    }
+  
+  if (m_Ring2Vol)
+    {
+      if (m_Ring2Vol->GetVisAttributes())
+	{
+	  return;
+    }
+      m_Ring2Vol->SetVisAttributes(m_VisAtt3);
+      m_VisAttVec4.push_back(m_VisAtt3);
+    }
+
+  G4VisAttributes *m_VisAtt4 = new G4VisAttributes();
+  m_VisAtt4->SetVisibility(true);
+  m_VisAtt4->SetForceSolid(true);
+  m_VisAtt4->SetColor(G4Colour::Yellow());
+  if (m_Ring3Vol)
+    {
+      if (m_Ring3Vol->GetVisAttributes())
+	{
+	  return;
+	}
+      m_Ring3Vol->SetVisAttributes(m_VisAtt4);
+      m_VisAttVec3.push_back(m_VisAtt4);
+    }
+  
+  if (m_Ring4Vol)
+    {
+      if (m_Ring4Vol->GetVisAttributes())
+	{
+	  return;
+	}
+      m_Ring4Vol->SetVisAttributes(m_VisAtt4);
+      m_VisAttVec4.push_back(m_VisAtt4);
+    }
+  G4VisAttributes *m_VisAtt5 = new G4VisAttributes();
+  m_VisAtt5->SetVisibility(true);
+  m_VisAtt5->SetForceSolid(true);
+  m_VisAtt5->SetColor(G4Colour::Magenta());
+  if (m_Ring5Vol)
+    {
+      if (m_Ring5Vol->GetVisAttributes())
+	{
+	  return;
+	}
+      m_Ring5Vol->SetVisAttributes(m_VisAtt5);
+      m_VisAttVec3.push_back(m_VisAtt5);
+    }
+  
+  if (m_Ring6Vol)
+    {
+      if (m_Ring6Vol->GetVisAttributes())
+	{
+	  return;
+    }
+      m_Ring6Vol->SetVisAttributes(m_VisAtt5);
+      m_VisAttVec4.push_back(m_VisAtt5);
+    }
+  
 }
